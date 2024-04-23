@@ -28,7 +28,7 @@ class CarService
       $car = $this->createNewCar($data);
       return response()->json([
         'data' => $car
-      ], 201);
+      ], 201)->header('Content-Type', 'application/json');
     }
   }
 
